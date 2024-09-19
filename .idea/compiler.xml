@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Hibernet (1)" />
+        <module name="Hibernet (2)" />
+        <module name="HQL" />
+        <module name="Hibernet (3)" />
+        <module name="JPQL" />
+        <module name="SQL" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
