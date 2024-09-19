@@ -16,7 +16,6 @@ public class SessionFactoryConfiguration {
     private SessionFactoryConfiguration(){
         Configuration configuration = new Configuration().configure().addAnnotatedClass(Address.class).addAnnotatedClass(Customer.class);
         session = configuration.buildSessionFactory();
-
     }
     public static SessionFactoryConfiguration getInstance(){
         if (sessionFactoryConfiguration == null){

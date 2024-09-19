@@ -1,14 +1,12 @@
 package lk.ijse;
 
 import lk.ijse.config.SessionFactoryConfiguration;
-import lk.ijse.entity.Customer;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import java.util.Arrays;
 import java.util.List;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -18,7 +16,7 @@ public class Main {
         //inert
 //        Customer customer = new Customer();
 //        customer.setId(5);
-//        customer.setName("kirisaman");
+//        customer.setName("Nimal");
 //        session.save(customer);
 
         //delete
@@ -30,16 +28,16 @@ public class Main {
         //update
 //        String jpqlUpdate = "update Customer c set c.name = :name , c.address =:address where c.id=:id";
 //        Query query = session.createQuery(jpqlUpdate);
-//        query.setParameter("name", "James");
-//        query.setParameter("address", "gampaha");
+//        query.setParameter("name", "Kamal");
+//        query.setParameter("address", "Negombo");
 //        query.setParameter("id", 2);
 //        query.executeUpdate();
 
 
         //search
-//        String jpqlsearch = "SELECT c FROM Customer c WHERE c.name = :name";
-//        Query query = session.createQuery(jpqlsearch);
-//        query.setParameter("name", "James");
+//        String jpqlSearch = "SELECT c FROM Customer c WHERE c.name = :name";
+//        Query query = session.createQuery(jpqlSearch);
+//        query.setParameter("name", "Kamal");
 //
 //        List<Customer> customers = query.list();
 //        for (Customer c : customers) {
@@ -53,7 +51,6 @@ public class Main {
         for (Object[] o : customerr) {
             System.out.println(Arrays.toString(o));
         }
-
 
         tx.commit();
         session.close();

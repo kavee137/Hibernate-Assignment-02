@@ -11,8 +11,8 @@ import java.util.List;
 @Setter
 @ToString
 @Entity
-public class Customer {
 
+public class Customer {
     @Id
     private int id;
     private String name;
@@ -20,14 +20,4 @@ public class Customer {
 
     @OneToMany(mappedBy = "customer",fetch = FetchType.EAGER)
     List<Address> addresses;
-
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "cid=" + id +
-                ", name='" + name + '\'' +
-                ", addresses=" + addresses +
-                '}';
-    }
-
 }

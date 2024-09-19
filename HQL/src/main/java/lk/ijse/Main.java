@@ -1,8 +1,6 @@
 package lk.ijse;
 
-
 import lk.ijse.config.SessionFactoryConfiguration;
-import lk.ijse.entity.Customer;
 import lk.ijse.repository.Methods;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -15,14 +13,12 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-
             Methods methods = new Methods();
             Session session = SessionFactoryConfiguration.getInstance().getSession();
             Transaction transaction = session.beginTransaction();
 
-
             //insert
-            String cInsert = "INSERT INTO Customer (id, name, address) VALUES (3, 'Bandara', 'kandy')";
+            String cInsert = "INSERT INTO Customer (id, name, address) VALUES (3, 'Danuka', 'Galle')";
 //            int i = methods.InsertCustomer(session, cInsert);
 //            System.out.println(i);
 
@@ -36,7 +32,6 @@ public class Main {
 //            int i2 = methods.DeleteCustomer(hql2, session);
 //            System.out.println(i2);
 
-
              //search
              String hql3 = "from Customer where name = :name";
 //             List<Customer> customers = methods.SearchCustomer(hql3, session);
@@ -44,7 +39,6 @@ public class Main {
 //                  System.out.println(customer.getId());
 //                  System.out.println(customer.getName());
 //             }
-
 
            //join query
            String hql4 = "select a.aid, a.city, a.street from Address a inner join Customer c on a.customer = c ";

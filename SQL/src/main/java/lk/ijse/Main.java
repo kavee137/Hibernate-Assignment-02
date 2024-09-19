@@ -17,14 +17,14 @@ public class Main {
         //insert
         NativeQuery query = session.createNativeQuery("insert into Customer values (?1,?2,?3)");
 //        query.setParameter(1,4);
-//        query.setParameter(2,"Panadura");
-//        query.setParameter(3,"NImal");
+//        query.setParameter(2,"Kalutara");
+//        query.setParameter(3,"Damith");
 //        query.executeUpdate();
 
 
         //update
         NativeQuery query1 = session.createNativeQuery("update Customer set name = ?1 where id = ?2");
-//        query1.setParameter(1,"Suresh");
+//        query1.setParameter(1,"Amali");
 //        query1.setParameter(2,1);
 //        query1.executeUpdate();
 
@@ -42,7 +42,6 @@ public class Main {
             System.out.println("Name: " + customer[0]);
             System.out.println("Address: " + customer[1]);
         }
-
 
         transaction.commit();
         session.close();
